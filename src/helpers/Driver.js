@@ -57,6 +57,21 @@ export default class Driver {
 		const panel = await getDevtoolsPanel(page, {
 			panelName: 'panel.html',
 		})
+
+		const targets = await browser.targets();
+		const extensionTarget = targets.find(target =>
+			target.url().startsWith('chrome-extension://') &&
+			target.url().endsWith('panel.html')
+		)
+		const networkLogs = []
+		const client = await extensionTarget.createCDPSession()
+		await client.send('Network.enable')
+		client.on('Network.requestWillBeSent', request => {
+			if (request) {
+				networkLogs.push(request.request);
+			}
+		})
+
 		page.bringToFront()
 		global.panel = panel
 		switch (viewport) {
@@ -74,6 +89,6 @@ export default class Driver {
 			default:
 				throw new Error('Supported devices are only MOBILE | TABLET | DESKTOP')
 		}
-		return page
+		return [page, networkLogs]
 	}
 }
