@@ -73,7 +73,7 @@ describe('Extension - Dashboard screen tests', () => {
 		await flows.resetSettingsOptionsToDefault({ isLoggedIn: true })
 	})
 
-	test('C44775 - Verify "Start new scan" option in header section of Dashboard', async () => {
+	test.only('C44775 - Verify "Start new scan" option in header section of Dashboard', async () => {
 		// PRE CONDITIONS
 		logger.info(`Verifying Test - ${expect.getState().currentTestName}`)
 		let testName = `dashboard test ${createdDate} : ${time}`

@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer')
 const { getDevtoolsPanel } = require('puppeteer-devtools')
 const config = require('../../config')
 const TestData = require('../testData/TestData').default
-const chromeExtension = config.ChromeExtension
+const chromeExtension = config.browserExtensionPath
 const edgeExtension = config.EdgeExtension
 
 export default class Driver {
