@@ -1,0 +1,36 @@
+{
+	"name": "axe-pro-automation-framework",
+	"version": "1.0.0",
+	"description": "Automation Framework for Axe DevTools Pro using Puppeteer and Jest",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest sample --forceExit --testTimeout=90000",
+		"test-snapshots-update": "jest --config = ./jest.config.js --updateSnapshot --detectOpenHandles --forceExit"
+	},
+	"author": "Deque",
+	"license": "ISC",
+	"dependencies": {
+		"@babel/core": "^7.15.8",
+		"@babel/preset-env": "^7.15.8",
+		"axios": "^0.24.0",
+		"babel-jest": "^27.3.1",
+		"browser-env": "^3.3.0",
+		"clipboardy": "^2.0.0",
+		"csv-parser": "^3.0.0",
+		"dotenv": "^16.0.1",
+		"jest": "^27.3.1",
+		"jest-html-reporters": "^2.1.6",
+		"jest-image-snapshot": "^4.5.1",
+		"jest-puppeteer": "^6.0.0",
+		"lodash": "^4.17.21",
+		"prettier": "^2.5.1",
+		"puppeteer": "^13.7.0",
+		"puppeteer-devtools": "^3.0.0",
+		"qs": "^6.10.1",
+		"winston": "^3.3.3",
+		"xlsx": "^0.17.3"
+	},
+	"devDependencies": {
+		"puppeteer-screenshot-tester": "^1.5.0"
+	}
+}

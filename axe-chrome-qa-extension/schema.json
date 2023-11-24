@@ -1,0 +1,97 @@
+{
+  "type": "object",
+  "properties": {
+    "AxeURL": {
+      "title": "The axe server url to point the extension at",
+      "description": "Set to full url of your axe DevTools server",
+      "type": "string"
+    },
+    "UsageServiceURL": {
+      "title": "Usage Service URL endpoint",
+      "description": "The url of the Usage Service to have data collected and sent to.",
+      "type": "string"
+    },
+    "UsageServiceOrganization": {
+      "title": "Usage Service Organization",
+      "description": "The organization name to send to the Usage Service.",
+      "type": "string"
+    },
+    "UsageServiceDepartment": {
+      "title": "Usage Service Department",
+      "description": "The department name to send to the Usage Service.",
+      "type": "string"
+    },
+    "UsageServiceApplication": {
+      "title": "Usage Service Application",
+      "description": "The application name to send to the Usage Service.",
+      "type": "string"
+    },
+    "DataGather": {
+      "title": "Send usage data to the provided usage server",
+      "description": "If set to true, usage data will be collected and sent to our usage server",
+      "type": "boolean"
+    },
+    "DisableIGT": {
+      "title": "Disable Intelligent Guided Testing in the extension",
+      "description": "If set to true, no Intelligent Guided Tests will be rendered anywhere in the extension",
+      "type": "boolean"
+    },
+    "EnableIssueScreenshots": {
+      "title": "Capture screenshots of created issues",
+      "description": "If set to true, screenshots will be captured when issues are created",
+      "type": "boolean"
+    },
+    "WCAGLevel": {
+      "title": "A WCAG version and level to filter issues by",
+      "description": "When set to a valid accessibility standard only issues matching the set standard will be displayed",
+      "type": "string",
+      "deprecated": true
+    },
+    "AccessibilityStandard": {
+      "title": "An accessibility standard to filter issues by",
+      "description": "When set to a valid accessibility standard only issues matching the set standard will be displayed",
+      "type": "string"
+    },
+    "AxeVersion": {
+      "title": "A valid axe version to use when scanning for automatic issues",
+      "description": "When set to a valid axe version, the provided axe version will be used when scanning for automatic issues.",
+      "type": "string",
+      "pattern": "^(latest)|([0-9]+\\.[0-9]+)(\\.[0-9]+)?$"
+    },
+    "IncludeNeedsReviewInIssueCount": {
+      "title": "Include needs review issues in automatic issue count",
+      "description": "If set to false, needs review issues will no longer be included in the automatic issue count.",
+      "type": "boolean"
+    },
+    "AutomaticColorContrastReview": {
+      "title": "Only allow manual automatic color contrast reviews",
+      "description": "If set to \"manual\", automatic color contrast reviews can only be run manually.",
+      "type": "string"
+    },
+    "EnableMachineLearning": {
+      "title": "Capture screenshots and send them to ML servers to be processed.",
+      "description": "If set to true, some IGTs use will use Machine Learning (ML) to optimize testing.",
+      "type": "boolean"
+    },
+    "EnableAutomaticColorContrast": {
+      "title": "Enables the automatic color contrast review tool",
+      "description": "If set to true, screenshots will be captured when the automatic color contrast tool is run.",
+      "type": "boolean"
+    },
+    "DisableAllScreenshots": {
+      "title": "Disables all optional screenshot capabilities",
+      "description": "If set to true, features requiring screenshots will be disabled.",
+      "type": "boolean"
+    },
+    "DisableNeedsReview": {
+      "title": "Hides needs review issues entirely",
+      "description": "If set to true, needs review issues won't be seen anywhere and automatic color contrast tool will be disabled",
+      "type": "boolean"
+    },
+    "OfflineLicenseKey": {
+      "title": "Enables local persistence of data without access to an axe DevTools server",
+      "description": "If set to valid license key, will persist all data locally and disable feature requiring an axe DevTools server.",
+      "type": "string"
+    }
+  }
+}
